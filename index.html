@@ -2,65 +2,66 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>OffWorld Level</title>
   <link rel="stylesheet" href="styles.css" />
+
 </head>
 <body>
   <header>
-    <h1>OffWorld Level</h1>
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+    <nav class="nav">
+      <div class="brand"><strong>OffWorld Level</strong></div>
+      <div class="links">
+        <a href="#">Solutions</a>
+        <a href="#contact">Contact</a>
+      </div>
     </nav>
   </header>
 
   <section class="hero">
-    <h2>Innovate. Integrate. Elevate.</h2>
-    <p>Empowering businesses with cutting-edge tech solutions.</p>
-    <button onclick="scrollToSection('contact')">Get in Touch</button>
-  </section>
-
-  <section id="about">
-    <h3 class="section_title">About Us</h3>
-    <p>OffWorld Level is a forward-thinking tech company specializing in scalable software, cloud infrastructure, and IT consulting. We help businesses transform digitally with reliable and secure solutions.</p>
-  </section>
-
-  <section id="services">
-    <h3 class="section_title">Our Services</h3>
-    <div class="service-grid">
-      <div class="service-card">
-        <h4>Software Development</h4>
-        <p>Custom applications tailored to your business needs.</p>
-      </div>
-      <div class="service-card">
-        <h4>Cloud Solutions</h4>
-        <p>Secure and scalable cloud infrastructure for modern businesses.</p>
-      </div>
-      <div class="service-card">
-        <h4>IT Consulting</h4>
-        <p>Expert guidance to optimize your tech strategy.</p>
-      </div>
+    <div class="hero-inner">
+      <img class="logo" src="logo-white.png" alt="OffWorld Level logo" />
+      <p class="tagline">Next-level IT, engineered with precision and built for orbit-scale reliability.</p>
     </div>
   </section>
 
+  <main>
+    <div class="grid">
+      <div class="card">
+        <h3>Infrastructure</h3>
+        <p>Cloud-native architectures, automation, and observability to scale without friction.</p>
+      </div>
+      <div class="card">
+        <h3>Security</h3>
+        <p>Zero-trust frameworks, continuous monitoring, and proactive threat mitigation.</p>
+      </div>
+      <div class="card">
+        <h3>Software Development</h3>
+        <p>Custom high quality applications tailored to your business needs.</p>
+      </div>
+    </div>
+  </main>
+
   <section id="contact">
-    <h3 class="section_title">Contact Us</h3>
-    <form>
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
+    <div style="max-width:700px; margin:0 auto; text-align:center;">
+      <h2>Get in Touch</h2>
+      <p>Have a project, question, or just want to say hello? Drop us a message below.</p>
+      <form action="https://formspree.io/f/your-form-id" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
   </section>
 
   <footer>
-    <p>&copy; OffWorld Level. All rights reserved.</p>
+    © <span id="year"></span> OffWorld Level. All rights reserved.
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
